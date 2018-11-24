@@ -20,7 +20,7 @@ namespace blankspaces.Models
             this.DETALLEDEPERSONAs = new HashSet<DETALLEDEPERSONA>();
         }
     
-        public int IDPERSONA { get; set; }
+        public string IDPERSONA { get; set; }
         public Nullable<int> IDMUNICIPIO { get; set; }
         public string NOMBRE { get; set; }
         public string APELLIDO { get; set; }
