@@ -15,10 +15,10 @@ namespace blankspaces.Models
     public partial class PENALIZACION
     {
         public int IDPE { get; set; }
-        public string IDUSUARIO { get; set; }
+        public string ID { get; set; }
         public Nullable<System.DateTime> FECHAINI { get; set; }
         public Nullable<System.DateTime> FECHAFIN { get; set; }
     
-        public virtual USUARIO USUARIO { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

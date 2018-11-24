@@ -21,13 +21,13 @@ namespace blankspaces.Models
         }
     
         public int IDMENU { get; set; }
-        public Nullable<decimal> IDROL { get; set; }
+        public string ID { get; set; }
         public Nullable<int> MEN_IDMENU { get; set; }
         public string NOMBRE { get; set; }
     
+        public virtual AspNetRole AspNetRole { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<MENU> MENU1 { get; set; }
         public virtual MENU MENU2 { get; set; }
-        public virtual ROL ROL { get; set; }
     }
 }
