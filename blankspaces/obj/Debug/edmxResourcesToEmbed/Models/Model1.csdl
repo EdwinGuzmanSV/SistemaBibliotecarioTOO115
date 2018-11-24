@@ -56,7 +56,7 @@
     <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
     <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
     <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="IdPersona" Type="Int32" Nullable="false" />
+    <Property Name="IdPersona" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
     <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
     <NavigationProperty Name="CATERGORIAs" Relationship="Self.FK_CATERGOR_REFERENCE_ASPNETUSERS" FromRole="AspNetUsers" ToRole="CATERGORIA" />
@@ -96,7 +96,7 @@
       <PropertyRef Name="IDDETALLE" />
     </Key>
     <Property Name="IDDETALLE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IDPERSONA" Type="Int32" Nullable="false" />
+    <Property Name="IDPERSONA" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="LUGARDEESTUDIOS" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="TRABAJA" Type="Boolean" Nullable="false" />
     <Property Name="ESTUDIA" Type="Boolean" Nullable="false" />
@@ -174,7 +174,7 @@
     <Key>
       <PropertyRef Name="IDPERSONA" />
     </Key>
-    <Property Name="IDPERSONA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IDPERSONA" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="IDMUNICIPIO" Type="Int32" />
     <Property Name="NOMBRE" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="APELLIDO" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />

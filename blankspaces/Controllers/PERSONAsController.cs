@@ -23,13 +23,13 @@ namespace blankspaces.Controllers
             return View(pERSONAs.ToList());
         }
 
-        public JsonResult IsUserNameAvailable(int IDPERSONA)
+        public JsonResult IsUserNameAvailable(string IDPERSONA)
         {
             return Json(!db.PERSONAs.Any(person => person.IDPERSONA == IDPERSONA), JsonRequestBehavior.AllowGet);
         }
 
         // GET: PERSONAs/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
@@ -149,7 +149,7 @@ namespace blankspaces.Controllers
         }
 
         // GET: PERSONAs/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
@@ -182,13 +182,13 @@ namespace blankspaces.Controllers
         }
 
         // GET: PERSONAs/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PERSONA pERSONA = db.PERSONAs.Find(id);
+           PERSONA pERSONA = db.PERSONAs.Find(id);
             if (pERSONA == null)
             {
                 return HttpNotFound();
@@ -199,7 +199,7 @@ namespace blankspaces.Controllers
         // POST: PERSONAs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             PERSONA pERSONA = db.PERSONAs.Find(id);
             db.PERSONAs.Remove(pERSONA);

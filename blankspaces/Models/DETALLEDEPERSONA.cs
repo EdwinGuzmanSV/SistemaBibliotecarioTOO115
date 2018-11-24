@@ -15,7 +15,7 @@ namespace blankspaces.Models
     public partial class DETALLEDEPERSONA
     {
         public int IDDETALLE { get; set; }
-        public int IDPERSONA { get; set; }
+        public string IDPERSONA { get; set; }
         public string LUGARDEESTUDIOS { get; set; }
         public bool TRABAJA { get; set; }
         public bool ESTUDIA { get; set; }

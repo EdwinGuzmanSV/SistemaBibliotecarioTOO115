@@ -24,6 +24,20 @@
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                   @{  if (User.IsInRole("Administrador General"))
+                       {
+                    <li>@Html.ActionLink("Estadisticas", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Gestionar Personas", "Index", "PERSONAs")</li>
+                    <li>@Html.ActionLink("Gestionar Bibliotecas", "Index", "Home")</li>
+                           }
+                       }
+                    @{  if (User.IsInRole("Administrador Bibliotecario"))
+                        {
+                            <li>@Html.ActionLink("Gestionar Material", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Gestionar Personas", "Index", "PERSONAs")</li>
+                            <li>@Html.ActionLink("Devoluciones", "Index", "Home")</li>
+                        }
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
