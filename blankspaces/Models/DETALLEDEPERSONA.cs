@@ -15,10 +15,10 @@ namespace blankspaces.Models
     public partial class DETALLEDEPERSONA
     {
         public int IDDETALLE { get; set; }
-        public string IDPERSONA { get; set; }
+        public int IDPERSONA { get; set; }
         public string LUGARDEESTUDIOS { get; set; }
-        public Nullable<bool> TRABAJA { get; set; }
-        public Nullable<bool> ESTUDIA { get; set; }
+        public bool TRABAJA { get; set; }
+        public bool ESTUDIA { get; set; }
         public string NOMBREMADRE { get; set; }
         public string NOMBREPADRE { get; set; }
     

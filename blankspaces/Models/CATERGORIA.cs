@@ -14,23 +14,10 @@ namespace blankspaces.Models
     
     public partial class CATERGORIA
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public CATERGORIA()
-        {
-            this.CATERGORIA1 = new HashSet<CATERGORIA>();
-            this.MATERIALBIBLIOGRAFICOes = new HashSet<MATERIALBIBLIOGRAFICO>();
-        }
-    
         public decimal IDCATEGORIA { get; set; }
-        public Nullable<decimal> CAT_IDCATEGORIA { get; set; }
-        public string IDUSUARIO { get; set; }
+        public string ID { get; set; }
         public string NOMCAT { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CATERGORIA> CATERGORIA1 { get; set; }
-        public virtual CATERGORIA CATERGORIA2 { get; set; }
-        public virtual USUARIO USUARIO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MATERIALBIBLIOGRAFICO> MATERIALBIBLIOGRAFICOes { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

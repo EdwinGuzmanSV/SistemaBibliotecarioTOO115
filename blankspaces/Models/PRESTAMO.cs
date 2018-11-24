@@ -16,11 +16,11 @@ namespace blankspaces.Models
     {
         public int IDPRESTAMO { get; set; }
         public Nullable<decimal> IDMATBIBLIO { get; set; }
-        public string IDUSUARIO { get; set; }
+        public string ID { get; set; }
         public string FECHADEPRESTAMO { get; set; }
         public string FECHADEENTREGA { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
         public virtual MATERIALBIBLIOGRAFICO MATERIALBIBLIOGRAFICO { get; set; }
-        public virtual USUARIO USUARIO { get; set; }
     }
 }

@@ -18,10 +18,9 @@ namespace blankspaces.Models
         public PERSONA()
         {
             this.DETALLEDEPERSONAs = new HashSet<DETALLEDEPERSONA>();
-            this.USUARIOs = new HashSet<USUARIO>();
         }
     
-        public string IDPERSONA { get; set; }
+        public int IDPERSONA { get; set; }
         public Nullable<int> IDMUNICIPIO { get; set; }
         public string NOMBRE { get; set; }
         public string APELLIDO { get; set; }
@@ -33,7 +32,5 @@ namespace blankspaces.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DETALLEDEPERSONA> DETALLEDEPERSONAs { get; set; }
         public virtual MUNICIPIO MUNICIPIO { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<USUARIO> USUARIOs { get; set; }
     }
 }

@@ -24,7 +24,7 @@ namespace blankspaces.Models
         public Nullable<decimal> IDLOCALIDAD { get; set; }
         public Nullable<decimal> IDCATEGORIA { get; set; }
         public Nullable<decimal> IDTIPO { get; set; }
-        public string IDUSUARIO { get; set; }
+        public string ID { get; set; }
         public Nullable<decimal> REL_IDAUTOR { get; set; }
         public string NOMBRE { get; set; }
         public string DESCRIPCION { get; set; }
@@ -37,11 +37,10 @@ namespace blankspaces.Models
         public string FOTO { get; set; }
         public Nullable<int> IDAUTOR { get; set; }
     
-        public virtual CATERGORIA CATERGORIA { get; set; }
+        public virtual AspNetUser AspNetUser { get; set; }
         public virtual DOCUMENTOLOCALIDAD DOCUMENTOLOCALIDAD { get; set; }
         public virtual TIPODOCUMENTO TIPODOCUMENTO { get; set; }
         public virtual RELATIONSHIP_15 RELATIONSHIP_15 { get; set; }
-        public virtual USUARIO USUARIO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRESTAMO> PRESTAMOes { get; set; }
     }
