@@ -42,8 +42,6 @@ namespace blankspaces.Models
         public virtual DbSet<PERSONA> PERSONAs { get; set; }
         public virtual DbSet<PRESTAMO> PRESTAMOes { get; set; }
         public virtual DbSet<RELATIONSHIP_15> RELATIONSHIP_15 { get; set; }
-        public virtual DbSet<ROL> ROLs { get; set; }
         public virtual DbSet<TIPODOCUMENTO> TIPODOCUMENTOes { get; set; }
-        public virtual DbSet<USUARIO> USUARIOs { get; set; }
     }
 }

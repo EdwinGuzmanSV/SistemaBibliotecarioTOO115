@@ -19,7 +19,7 @@ namespace blankspaces.Controllers
         // GET: PERSONAs
         public ActionResult Index()
         {
-            var pERSONAs = db.PERSONAs.Include(p => p.IDPERSONA);
+            var pERSONAs = db.PERSONAs.Include(p => p.MUNICIPIO);
             return View(pERSONAs.ToList());
         }
 
@@ -188,7 +188,7 @@ namespace blankspaces.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PERSONA pERSONA = db.PERSONAs.Find(id);
+           PERSONA pERSONA = db.PERSONAs.Find(id);
             if (pERSONA == null)
             {
                 return HttpNotFound();

@@ -138,7 +138,7 @@ namespace blankspaces.Controllers
         //
         // GET: /Account/Register
         [AllowAnonymous]
-        public ActionResult Register(String id)
+        public ActionResult Register(string id)
         {
             RegisterViewModel rm = new RegisterViewModel();
             rm.IdPersona = id;
